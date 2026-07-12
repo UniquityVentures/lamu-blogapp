@@ -7,6 +7,7 @@ import (
 	"github.com/UniquityVentures/lamu/plugins/p_dashboard"
 	"github.com/UniquityVentures/lamu/plugins/p_users"
 	"github.com/UniquityVentures/lamu/registry"
+	"gtihub.com/NotoriousArnav/lamu-blogapp/plugins/landing"
 )
 
 func main() {
@@ -14,6 +15,7 @@ func main() {
 	plugins := []registry.Pair[string, lamu.Plugin]{
 		p_dashboard.GetPlugin(),
 		p_users.GetPlugin(),
+		landing.GetPlugin(),
 	}
 	// Load database settings, server addresses, and plugin parameters from config.toml.
 	config, err := lamu.LoadConfigFromFile("config.toml", plugins)
