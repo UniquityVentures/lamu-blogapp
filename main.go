@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 
+	"github.com/NotoriousArnav/lamu-blogapp/plugins/landing"
 	"github.com/UniquityVentures/lamu/lamu"
 	"github.com/UniquityVentures/lamu/plugins/p_dashboard"
 	"github.com/UniquityVentures/lamu/plugins/p_users"
 	"github.com/UniquityVentures/lamu/registry"
-	"gtihub.com/NotoriousArnav/lamu-blogapp/plugins/landing"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 	// Load database settings, server addresses, and plugin parameters from config.toml.
 	config, err := lamu.LoadConfigFromFile("config.toml", plugins)
 	if err != nil {
-     	log.Fatalf("failed loading configuration file: %v", err)
+		log.Fatalf("failed loading configuration file: %v", err)
 	}
 
 	// 3. Build global registries and run the Cobra CLI bootstrapper.

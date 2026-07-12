@@ -1,8 +1,8 @@
 package landing
 
 import (
-	"log"
-	"net/http"
+	// "log"
+	// "net/http"
 
 	"github.com/UniquityVentures/lamu/lamu"
 	"github.com/UniquityVentures/lamu/registry"
@@ -16,8 +16,7 @@ func LandingRoutePatch (old lamu.Route) lamu.Route {
 func pluginRoutes() lamu.PluginFeatures[lamu.Route] {
 	return lamu.PluginFeatures[lamu.Route]{
 		Patches: []registry.Pair[string, func(lamu.Route) lamu.Route]{
-			Key: "landing.DefaultRoute",
-			Value: LandingRoutePatch
-		}
+				{ Key: "core.HomeRoute", Value: LandingRoutePatch }, 
+			},
 	}
 }
