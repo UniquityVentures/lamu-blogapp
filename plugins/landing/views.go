@@ -1,7 +1,7 @@
 package landing
 
 import (
-//	"log"
+	//	"log"
 	// "net/http"
 
 	"github.com/UniquityVentures/lamu/lamu"
@@ -10,9 +10,9 @@ import (
 )
 
 func pluginViews() lamu.PluginFeatures[*views.View] {
-	return lamu.PluginFeatures[*views.View] {
+	return lamu.PluginFeatures[*views.View]{
 		Entries: []registry.Pair[string, *views.View]{
-			{ Key: "landing.HomeView", Value: lamu.GetPageView("landing.Home") },
+			{Key: "landing.HomeView", Value: lamu.GetPageView("landing.Home")},
 		},
 	}
 }

@@ -1,9 +1,9 @@
 package landing
 
 import (
+	"github.com/UniquityVentures/lamu/components"
 	"github.com/UniquityVentures/lamu/lamu"
 	"github.com/UniquityVentures/lamu/registry"
-	"github.com/UniquityVentures/lamu/components"
 
 	"context"
 	"maragu.dev/gomponents"
@@ -38,10 +38,9 @@ func (e *HomePage) GetKey() string     { return e.Key }
 func (e *HomePage) GetRoles() []string { return e.Roles }
 
 func pluginPages() lamu.PluginFeatures[components.PageInterface] {
-		return lamu.PluginFeatures[components.PageInterface] {
-			Entries: []registry.Pair[string, components.PageInterface]{
-				{ Key: "landing.Home", Value: &HomePage{} },
-			},
-		}
+	return lamu.PluginFeatures[components.PageInterface]{
+		Entries: []registry.Pair[string, components.PageInterface]{
+			{Key: "landing.Home", Value: &HomePage{}},
+		},
+	}
 }
-

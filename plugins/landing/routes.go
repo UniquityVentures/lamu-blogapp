@@ -8,7 +8,7 @@ import (
 	"github.com/UniquityVentures/lamu/registry"
 )
 
-func LandingRoutePatch (old lamu.Route) lamu.Route {
+func LandingRoutePatch(old lamu.Route) lamu.Route {
 	old.Handler = lamu.NewDynamicView("landing.HomeView")
 	return old
 }
@@ -16,7 +16,7 @@ func LandingRoutePatch (old lamu.Route) lamu.Route {
 func pluginRoutes() lamu.PluginFeatures[lamu.Route] {
 	return lamu.PluginFeatures[lamu.Route]{
 		Patches: []registry.Pair[string, func(lamu.Route) lamu.Route]{
-				{ Key: "core.HomeRoute", Value: LandingRoutePatch }, 
-			},
+			{Key: "core.HomeRoute", Value: LandingRoutePatch},
+		},
 	}
 }
