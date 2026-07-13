@@ -27,5 +27,6 @@ Address = ":42069"
   PWA_APP_LANG = "en-US"
 
 [plugins.p_users]
+# Default credentials for admin account, gets created when running `go run main.go generate`
 adminEmail = "superadmin@test.com"
 adminPassword = "SuperadminPassword1234"
