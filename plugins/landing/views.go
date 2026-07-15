@@ -4,15 +4,16 @@ import (
 	//	"log"
 	// "net/http"
 
-	"github.com/UniquityVentures/lamu/lamu"
-	"github.com/UniquityVentures/lamu/registry"
-	"github.com/UniquityVentures/lamu/views"
+	"github.com/lariv-in/lago/lago"
+	"github.com/lariv-in/lago/registry"
+	"github.com/lariv-in/lago/views"
 )
 
-func pluginViews() lamu.PluginFeatures[*views.View] {
-	return lamu.PluginFeatures[*views.View]{
+// Returns a single view that will be used to display the Landing home page
+func pluginViews() lago.PluginFeatures[*views.View] {
+	return lago.PluginFeatures[*views.View]{
 		Entries: []registry.Pair[string, *views.View]{
-			{Key: "landing.HomeView", Value: lamu.GetPageView("landing.Home")},
+			{Key: "landing.HomeView", Value: lago.GetPageView("landing.Home")},
 		},
 	}
 }

@@ -3,7 +3,7 @@ DBType = "Postgres"
 Address = ":42069"
 
 [PostgresConfig]
-  DSN = "host=127.0.0.1 user=pgadmin password=pgadmin_local dbname=lamu-blogapp port=5432 sslmode=disable TimeZone=Asia/Kolkata"
+  DSN = "host=127.0.0.1 user=pgadmin password=pgadmin_local dbname=lago-blogapp port=5432 sslmode=disable TimeZone=Asia/Kolkata"
 
 [plugins.p_pwa]
   # If set, /serviceworker.js will serve this file. If empty, p_pwa serves a minimal default.
@@ -14,8 +14,8 @@ Address = ":42069"
 
   staticDir = "./pwa_static/"
 
-  PWA_APP_NAME = "Blogapp Lamu"
-  PWA_APP_DESCRIPTION = "Blog app made using lamu"
+  PWA_APP_NAME = "Blogapp Lago"
+  PWA_APP_DESCRIPTION = "Blog app made using lago"
   PWA_APP_THEME_COLOR = "#0A0302"
   PWA_APP_BACKGROUND_COLOR = "#ffffff"
   PWA_APP_DISPLAY = "standalone"

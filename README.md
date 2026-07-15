@@ -1,6 +1,6 @@
-# lamu-blogapp
+# lago-blogapp
 
-A reference implementation of lamu, with the expected directory structure for projects.
+A reference implementation of lago, with the expected directory structure for projects.
 
 This implementation will be building a complete Blogging Web App which will demonstrate most of the features of the framework
 

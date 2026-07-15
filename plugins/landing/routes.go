@@ -4,18 +4,19 @@ import (
 	// "log"
 	// "net/http"
 
-	"github.com/UniquityVentures/lamu/lamu"
-	"github.com/UniquityVentures/lamu/registry"
+	"github.com/lariv-in/lago/lago"
+	"github.com/lariv-in/lago/registry"
 )
 
-func LandingRoutePatch(old lamu.Route) lamu.Route {
-	old.Handler = lamu.NewDynamicView("landing.HomeView")
+func LandingRoutePatch(old lago.Route) lago.Route {
+	old.Handler = lago.NewDynamicView("landing.HomeView")
 	return old
 }
 
-func pluginRoutes() lamu.PluginFeatures[lamu.Route] {
-	return lamu.PluginFeatures[lamu.Route]{
-		Patches: []registry.Pair[string, func(lamu.Route) lamu.Route]{
+// Patching the "/" route to make it render html instead of redirecting to login page/dashboard
+func pluginRoutes() lago.PluginFeatures[lago.Route] {
+	return lago.PluginFeatures[lago.Route]{
+		Patches: []registry.Pair[string, func(lago.Route) lago.Route]{
 			{Key: "core.HomeRoute", Value: LandingRoutePatch},
 		},
 	}

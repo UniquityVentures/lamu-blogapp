@@ -1,9 +1,9 @@
-module github.com/NotoriousArnav/lamu-blogapp
+module github.com/NotoriousArnav/lago-blogapp
 
 go 1.26.5
 
 require (
-	github.com/UniquityVentures/lamu v0.6.18
+	github.com/lariv-in/lago v0.6.3
 	maragu.dev/gomponents v1.3.0
 )
 

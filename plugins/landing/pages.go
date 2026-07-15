@@ -1,11 +1,12 @@
 package landing
 
 import (
-	"github.com/UniquityVentures/lamu/components"
-	"github.com/UniquityVentures/lamu/lamu"
-	"github.com/UniquityVentures/lamu/registry"
-
 	"context"
+
+	"github.com/lariv-in/lago/components"
+	"github.com/lariv-in/lago/lago"
+	"github.com/lariv-in/lago/registry"
+
 	"maragu.dev/gomponents"
 )
 
@@ -37,8 +38,8 @@ func (e *HomePage) Build(ctx context.Context) gomponents.Node {
 func (e *HomePage) GetKey() string     { return e.Key }
 func (e *HomePage) GetRoles() []string { return e.Roles }
 
-func pluginPages() lamu.PluginFeatures[components.PageInterface] {
-	return lamu.PluginFeatures[components.PageInterface]{
+func pluginPages() lago.PluginFeatures[components.PageInterface] {
+	return lago.PluginFeatures[components.PageInterface]{
 		Entries: []registry.Pair[string, components.PageInterface]{
 			{Key: "landing.Home", Value: &HomePage{}},
 		},
