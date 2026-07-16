@@ -10,7 +10,7 @@ This implementation will provide a sample for the following:
 - Patching of Core and bundled plugins
 
 At a glance, the file structure is supposed to look as follows:
-```
+```text
 <project root>
 ├── config.toml
 ├── go.mod
